@@ -38,6 +38,25 @@ function bigToSmall(arr) {
           return cache = cache.sort((a, b) => b - a).join('>')
 }
 
+// anoda soln
+function bigToSmall(arr) {
+          return [].concat(...arr).sort((a, b) => b - a).join('>');
+}
+
+// anoda soln
+function bigToSmall(arr){
+          //coding here...
+          let res = [].concat(...arr);
+
+          res.sort(function(a, b){return a - b});
+
+          res.reverse();
+
+          res = res.join(">");
+          
+          return res;
+}
+
 
 bigToSmall([[1,2],[3,4],[5,6]])
 bigToSmall([[1,3,5],[2,4,6]]) 
